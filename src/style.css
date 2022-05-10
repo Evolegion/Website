@@ -70,3 +70,16 @@ body
     letter-spacing: .5px;
     margin-top: 1rem;
 }
+
+.scroll-wheel{
+    animation-name: scroll-wheel-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scroll-wheel-animation {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);} 
+}
