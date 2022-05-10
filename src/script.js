@@ -1,7 +1,15 @@
 import './style.css'
+import Logo from './images/logo.svg';
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
+
+
+// Add the image to our existing div.
+const imageElement = document.querySelector('img.logo')
+const theLogo = new Image();
+theLogo.src = Logo;
+imageElement.src = Logo;
 
 // Texture Loader
 const loader = new THREE.TextureLoader()
@@ -121,8 +129,8 @@ const tick = () =>
 
     if(mouseX > 0)
     {
-        particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00008)
-        particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008)
+        particlesMesh.rotation.y = mouseX * (elapsedTime * 0.000008)
+        particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.000008)
     }
 
     // Update Orbital Controls

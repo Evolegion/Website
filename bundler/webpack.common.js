@@ -31,7 +31,13 @@ module.exports = {
             // HTML
             {
                 test: /\.(html)$/,
-                use: ['html-loader']
+                use: 
+                [
+                    {
+                        loader: 'html-loader',
+                        options: { minimize: true }
+                    }
+                ]
             },
 
             // JS
@@ -56,14 +62,18 @@ module.exports = {
 
             // Images
             {
-                test: /\.(jpg|png|gif|svg)$/,
+                test: /\.(jpeg|jpg|png|gif|svg)$/,  
                 use:
                 [
                     {
                         loader: 'file-loader',
                         options:
                         {
-                            outputPath: 'assets/images/'
+                            name: '[name].[ext]',
+                            outputPath: 'images',
+                            publicPath: 'images',
+                            emitFile: true,
+                            esModule: false
                         }
                     }
                 ]
