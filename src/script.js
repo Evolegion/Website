@@ -32,7 +32,8 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3
 const material = new THREE.PointsMaterial({
     size: 0.009,
     map: star,
-    transparent: true
+    transparent: true,
+    blending: THREE.AdditiveBlending
 })
 
 // Mesh
@@ -117,7 +118,6 @@ const tick = () =>
 
     position += mouseY 
     mouseY *= 0.9
-    console.log(position)
     // Update objects
     particlesMesh.rotation.y = -0.01 * elapsedTime
     particlesMesh.rotation.x = -position
