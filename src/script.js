@@ -96,14 +96,13 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 // Mouse
 
-document.addEventListener('mousemove', animateParticles)
+window.addEventListener('wheel', onMouseWheel)
 
-let mouseX = 0
 let mouseY = 0
+let position = 0
 
-function animateParticles(event) {
-    mouseY = event.clientY
-    mouseX = event.clientX
+function onMouseWheel(event) {
+    mouseY = event.deltaY * 0.000008
 }
 
 /**
@@ -117,16 +116,12 @@ const tick = () =>
 
     const elapsedTime = clock.getElapsedTime()
 
+    position += mouseY 
+    mouseY *= 0.9
+    console.log(position)
     // Update objects
     particlesMesh.rotation.y = -0.01 * elapsedTime
-
-    /*
-    if(mouseX > 0)
-    {
-        particlesMesh.rotation.y += mouseX * (elapsedTime * 0.0000008)
-        particlesMesh.rotation.x += -mouseY * (elapsedTime * 0.0000008)
-    }
-    */
+    particlesMesh.rotation.x = -position
     // Update Orbital Controls
     // controls.update()
 
