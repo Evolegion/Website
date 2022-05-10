@@ -1,15 +1,7 @@
 import './style.css'
-import Logo from './images/logo.svg';
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
-
-
-// Add the image to our existing div.
-const imageElement = document.querySelector('img.logo')
-const theLogo = new Image();
-theLogo.src = Logo;
-imageElement.src = Logo;
 
 // Texture Loader
 const loader = new THREE.TextureLoader()
