@@ -21,8 +21,9 @@ const particlesGeometry = new THREE.BufferGeometry;
 const particlesAmount = 5000; 
 const posArray = new Float32Array(particlesAmount * 3);
 
+var PHI = Math.PI * (3 - Math.sqrt(5));
 for(let i = 0; i < particlesAmount * 3; i++){
-    posArray[i] = (Math.random() - 0.5) * (Math.random() * 5) 
+    posArray[i] = (Math.random() - 0.5) * (Math.random() * PHI) 
 }
 
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
@@ -117,14 +118,15 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
 
     // Update objects
-    particlesMesh.rotation.y = -0.1 * elapsedTime
+    particlesMesh.rotation.y = -0.01 * elapsedTime
 
+    /*
     if(mouseX > 0)
     {
-        particlesMesh.rotation.y = mouseX * (elapsedTime * 0.000008)
-        particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.000008)
+        particlesMesh.rotation.y += mouseX * (elapsedTime * 0.0000008)
+        particlesMesh.rotation.x += -mouseY * (elapsedTime * 0.0000008)
     }
-
+    */
     // Update Orbital Controls
     // controls.update()
 

@@ -1,3 +1,23 @@
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a6a6a6;
+}
+
 *
 {
     margin: 0;
@@ -9,6 +29,8 @@ body
 {
     height: 100vh;
     font-family: 'Roboto','Helvetica','Arial','sans-serif';
+    scrollbar-color: #c4c4c4 transparent;
+    scrollbar-width: thin;
 }
 
 .webgl
@@ -21,7 +43,7 @@ body
 
 .container
 {
-    position: absolute;
+    position: relative;
     z-index: 1;
     width: 100%;    
     height: 100vh;
