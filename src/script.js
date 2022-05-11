@@ -1,13 +1,9 @@
 import './style.css'
 import * as THREE from 'three'
 
-
 // Texture Loader
 const loader = new THREE.TextureLoader()
 const star = loader.load('./star.png')
-
-// Debug
-//const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -26,6 +22,7 @@ for(let i = 0; i < particlesAmount * 3; i++){
 }
 
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
+
 
 // Materials
 
@@ -51,7 +48,7 @@ scene.add(pointLight)
 /**
  * Sizes
  */
-const sizes = {
+ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
@@ -118,9 +115,11 @@ const tick = () =>
 
     position += mouseY 
     mouseY *= 0.9
+    
     // Update objects
     particlesMesh.rotation.y = -0.01 * elapsedTime
     particlesMesh.rotation.x = -position
+
     // Update Orbital Controls
     // controls.update()
 
@@ -132,4 +131,3 @@ const tick = () =>
 }
 
 tick()
-
