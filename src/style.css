@@ -31,6 +31,7 @@ body
     font-family: 'Roboto','Helvetica','Arial','sans-serif';
     scrollbar-color: #c4c4c4 transparent;
     scrollbar-width: thin;
+    background-color: #000000;
 }
 
 .webgl
