@@ -27,11 +27,11 @@
 html,
 body
 {
-    height: 100vh;
     font-family: 'Roboto','Helvetica','Arial','sans-serif';
     scrollbar-color: #c4c4c4 transparent;
     scrollbar-width: thin;
     background-color: #000000;
+    overflow-x: hidden;
 }
 
 .webgl
@@ -93,12 +93,29 @@ body
     width: 100%;    
 }
 
-.partner h1{
+h3{
     font-size: 4rem;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     letter-spacing: .5px;
     margin-bottom: 6rem;
+}
+
+h4{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    letter-spacing: .5px;
+    margin-bottom: 6rem;
+}
+
+p{
+    font-size: 1rem;
+    text-transform: initial;
+    color: rgb(255, 255, 255);
+    letter-spacing: .5px;
+    margin-bottom: 6rem;
+    font-weight: normal;
 }
 
 .partner button {
@@ -176,3 +193,46 @@ body
     overflow: hidden;
 }
 
+.wrapper {
+    display: flex;
+
+}
+
+.text{
+    display: block;
+    text-align: center;
+}
+
+.mt-5{
+    margin-top: 5rem;
+}
+
+@media (max-width:960px) {
+    .logo{
+        transform: scale(0.6) !important;
+    }
+}
+
+@media (max-width:400px) {
+    .logo{
+        transform: scale(0.4) !important;
+    }
+}
+
+.column-img{
+    justify-items: center; 
+    align-items: center;
+}
+
+.column-img img{
+    height:400px; width: auto;
+}
+
+.column-text{
+    padding-left: 4rem;
+    color: white;
+}
+
+.column-text p{
+    padding-top: 1rem;
+}
