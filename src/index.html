@@ -12,6 +12,8 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000"></meta>
     <script type="module" src="index.js"></script>
+    <script type="module" src="moon.js"></script>
+    <script type="module" src="heart.js"></script>
     <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
     <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
 </head>
@@ -33,43 +35,69 @@
             <p>Scroll into the legion</p>
         </div>            
     </div>
-    <div class="container mt-5">
+    <div class="container">
         <section>
-            <h3 class="wrapper text">
-              TEAM VALUES & VISION
+            <h3 class="wrapper text" style="margin-top: 5rem;">
+              VISION & VALUES  
             </h3>
         </section>
         <section>
             <div class="wrapper column-img">
-                    <img src="https://cdn.discordapp.com/attachments/965306762838278174/974478914112069673/unknown.png">
-
-                    <div class="column-text">
-                      <h4>Transparancy</h2>
-                      <p>Some text..</p>
-                    </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrapper column-img">
-                <img src="https://cdn.discordapp.com/attachments/965306762838278174/974478914112069673/unknown.png">
-
+                <div id="heart-container" style="width: 627px; height:470px">
+                </div>
                 <div class="column-text">
-                  <h4>Transparancy</h2>
-                  <p>Some text..</p>
+                    <h4>Transparancy</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
                 </div>
             </div>
         </section>
         <section>
             <div class="wrapper column-img">
-                <img src="https://cdn.discordapp.com/attachments/965306762838278174/974478914112069673/unknown.png">
+                <video muted="" loop="" playsinline="" autoplay="" preload="none" data-stop="true" class="" style="visibility: visible;"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/home-1.mov" type="video/mp4; codecs=&quot;hvc1&quot;"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm" type="video/webm"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm" type="video/webm"> </video>
 
                 <div class="column-text">
-                  <h4>Transparancy</h2>
-                  <p>Some text..</p>
+                  <h4>Innovate</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper column-img">
+                <div id="moon-container" style="width: 627px; height:470px">
+                </div>
+                <div class="column-text">
+                  <h4>Listen, learn & adapt</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
                 </div>
             </div>
         </section>
     </div>
+    
+
+
+
+
+    <div class="description panel blue">
+        <div><h1>Layered pinning</h1>
+          <p>Use pinning to layer panels on top of each other as you scroll.</p>
+          <div class="scroll-down">Scroll down<div class="arrow"></div></div>
+        </div>
+      </div>
+      
+      
+      <section class="panel red">
+        ONE
+      </section>
+      <section class="panel orange">
+        TWO
+      </section>
+      <section class="panel purple">
+        THREE
+      </section>
+      <section class="panel green">
+        FOUR
+      </section>
+      
     <div class="container mt-5">
         <div class="partner">
             <h3>Partner with us</h3>
@@ -84,6 +112,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
         gsap.from('.logo', {opacity: 0, duration: 1, y: -50, ease: 'Power2.easeInOut'});
         gsap.from('.scroll', {opacity: 0, duration: 1, y: 50, ease: 'Power2.easeInOut', delay: 1.8});
         gsap.to('.logo-text-img', {width: 'auto', duration: 1, delay: 1, ease: 'power1.out'});
@@ -91,7 +121,7 @@
         gsap.utils.toArray('section').forEach((section, index) => {
         const w = section.querySelector('.wrapper');
         const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-        gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.5 }});});
+        gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.5, end: "center center"}});});
 
         gsap.from('.partner', {
             scrollTrigger: {
@@ -105,6 +135,17 @@
             ease: "Power2.easeInOut"
         });
 
+        let panels = gsap.utils.toArray(".pin-panel");
+
+        panels.forEach((panel, i) => {
+            
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top", 
+            pin: true, 
+            pinSpacing: false 
+        });
+        });
     </script>
 </body>
 </html>
