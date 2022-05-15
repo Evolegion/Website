@@ -106,10 +106,9 @@ h4{
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     letter-spacing: .5px;
-    margin-bottom: 6rem;
 }
 
-.column-text p{
+.column-text p, .column-text-2 p {
     font-size: 1rem;
     text-transform: initial;
     color: rgb(255, 255, 255);
@@ -119,7 +118,7 @@ h4{
     line-height: 1.3rem;
 }
 
-.partner button {
+.button {
     appearance: none;
     background-color: transparent;
     border: 2px solid #ffffff;
@@ -148,14 +147,14 @@ h4{
     text-transform: uppercase;
 }
 
-.partner button:hover {
+.button:hover {
     color: #fff;
     background-color: #000000;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-.partner button:active {
+.button:active {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -222,6 +221,7 @@ h4{
 
 .column-img{
     justify-items: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -235,7 +235,23 @@ h4{
     max-width: 500px;
 }
 
-.column-text p{
+.column-text-2{
+    color: white;
+    max-width: 500px;
+}
+
+.column-text p, .column-text-2 p{
     padding-top: 1rem;
 }
 
+
+
+.not-selectable{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Opera and Firefox */
+}

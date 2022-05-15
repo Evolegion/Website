@@ -9,7 +9,7 @@ var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera( 75, container.clientWidth / container.clientHeight, 0.1, 1000 );
 
-var renderer = new THREE.WebGLRenderer({alpha: true});
+var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
 
 var controls = new OrbitControls( camera, renderer.domElement );
 controls.enablePan = false;
@@ -68,10 +68,10 @@ function animate() {
 animate();
 
 
-function onResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
+// function onResize() {
+//   camera.aspect = window.innerWidth / window.innerHeight;
+//   camera.updateProjectionMatrix();
+//   renderer.setSize(window.innerWidth, window.innerHeight);
+// }
 
-window.addEventListener('resize', onResize, false);
+// window.addEventListener('resize', onResize, false);

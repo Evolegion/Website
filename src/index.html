@@ -14,6 +14,7 @@
     <script type="module" src="index.js"></script>
     <script type="module" src="moon.js"></script>
     <script type="module" src="heart.js"></script>
+    <script type="module" src="imageOne.js"></script>
     <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
     <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
 </head>
@@ -41,67 +42,64 @@
               VISION & VALUES  
             </h3>
         </section>
-        <section>
+        <section class="mt-5">
             <div class="wrapper column-img">
                 <div id="heart-container" style="width: 627px; height:470px">
                 </div>
                 <div class="column-text">
-                    <h4>Transparancy</h2>
+                    <h4>Transparancy</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="mt-5">
             <div class="wrapper column-img">
                 <video muted="" loop="" playsinline="" autoplay="" preload="none" data-stop="true" class="" style="visibility: visible;"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/home-1.mov" type="video/mp4; codecs=&quot;hvc1&quot;"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm" type="video/webm"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm" type="video/webm"> </video>
 
                 <div class="column-text">
-                  <h4>Innovate</h2>
+                  <h4>Innovate</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="mt-5">
             <div class="wrapper column-img">
                 <div id="moon-container" style="width: 627px; height:470px">
                 </div>
                 <div class="column-text">
-                  <h4>Listen, learn & adapt</h2>
+                  <h4>Listen, learn & adapt</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
                 </div>
             </div>
         </section>
     </div>
-    
-
-
-
-
-    <div class="description panel blue">
-        <div><h1>Layered pinning</h1>
-          <p>Use pinning to layer panels on top of each other as you scroll.</p>
-          <div class="scroll-down">Scroll down<div class="arrow"></div></div>
+    <div class="container mt-5" style="overflow: hidden;">
+        <div class="wrapper column-img" style="justify-content: center;">
+            <div class="column-text-2">
+                <h4 style="text-align: start;">ART ENGINE</h4>
+                <p style="text-align: start;">An open source free art generator that we created to help people to create randomized art with diffrent traits and rairity. </p>
+                <button class="button">Visit Page</button>
+            </div>
+            <div id="image-1-container" style="width: 627px; height:470px">
+            </div>  
         </div>
-      </div>
-      
-      
-      <section class="panel red">
-        ONE
-      </section>
-      <section class="panel orange">
-        TWO
-      </section>
-      <section class="panel purple">
-        THREE
-      </section>
-      <section class="panel green">
-        FOUR
-      </section>
-      
+                <!-- <li class="menu--item">
+                    <div class="wrapper column-img" style="justify-content: center;">
+                        <div class="column-text">
+                            <h4 class="not-selectable" style="text-align: start;">DOJANG NFT</h2>
+                            <p class="not-selectable" style="text-align: start;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
+                            <button class="button">Visit Page</button>
+                        </div>
+                        <img class="not-selectable" src="https://cdn.discordapp.com/attachments/965306762838278174/975435996109881414/unknown.png"></image>
+                    </div>
+                </li> -->
+
+
+    </div>
     <div class="container mt-5">
         <div class="partner">
             <h3>Partner with us</h3>
-            <button>Contact</button>
+            <button class="button">Contact</button>
         </div>
         <div class="footer">
             <p>©2022 Evolegion. All rights reserved </p>
@@ -127,7 +125,8 @@
             scrollTrigger: {
                 trigger: '.partner',
                 once: false,
-                start: "top bottom"
+                start: "top bottom",
+                toggleActions: "restart pause restart pause"
             },
             opacity: 0,
             y: 50,
