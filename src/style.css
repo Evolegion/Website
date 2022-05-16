@@ -272,7 +272,8 @@ body
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 4rem;  
+    padding: 4rem; 
+    justify-content: space-evenly; 
 }
 
 .projects .wrapper {
@@ -281,15 +282,34 @@ body
 }
 
 .point .point-text {
-    flex-basis: 40%;
-    margin-right: auto;
+    flex-basis: 50%;
 }
 
 .point .point-image {
-    flex-basis: 60%;
-    max-width: 55%;
-    height: auto;
-    padding-right: 2rem;
+    height: 600px;
+    width: 600px;
+    background: linear-gradient(180deg, #C68AE8 0%, #79DED7 100%);
+    border-radius: 20px;
+    position: relative;
+}
+
+.black-cover{
+    position: absolute;
+    left: 10;
+    right: 10;
+    top: 10;
+    bottom: 10;
+    border-radius: 20px;
+    background-color: #000000;
+}
+
+.black-cover svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 2rem;
 }
 
 .point-text h3 {
