@@ -93,7 +93,7 @@ body
     width: 100%;    
 }
 
-h3{
+.partner h4{
     font-size: 4rem;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
@@ -101,21 +101,21 @@ h3{
     margin-bottom: 6rem;
 }
 
-h4{
-    font-size: 2rem;
+.column-text h3{
+    font-size: 3rem;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
-    letter-spacing: .5px;
+    letter-spacing: .1rem;
 }
 
-.column-text p, .column-text-2 p {
-    font-size: 1rem;
+.column-text p{
+    font-size: 1.5rem;
     text-transform: initial;
     color: rgb(255, 255, 255);
     letter-spacing: 0.1rem;
     margin-bottom: 6rem;
     font-weight: normal;
-    line-height: 1.3rem;
+    line-height: 2rem;
 }
 
 .button {
@@ -207,6 +207,10 @@ h4{
     margin-top: 5rem;
 }
 
+.mb-5{
+    margin-bottom: 5rem;
+}
+
 @media (max-width:960px) {
     .logo{
         transform: scale(0.6) !important;
@@ -232,26 +236,78 @@ h4{
 .column-text{
     padding-left: 4rem;
     color: white;
-    max-width: 500px;
+    max-width: 40%;
 }
 
-.column-text-2{
-    color: white;
-    max-width: 500px;
-}
-
-.column-text p, .column-text-2 p{
+.column-text p{
     padding-top: 1rem;
 }
-
-
-
-.not-selectable{
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-    supported by Chrome, Opera and Firefox */
+  
+.projects {
+    position: relative;
+    z-index: 10;
 }
+
+.indicators {
+    left: 2rem;
+    top: 0;
+    margin: 10vh 0;
+    height: 80vh;
+    width: 3px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.indicator {
+    width: 100%;
+    background-color: #adadad;
+    flex-grow: 1;
+    margin: 2px 0;
+}
+
+.projects .point {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem;  
+}
+
+.projects .wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+.point .point-text {
+    flex-basis: 40%;
+    margin-right: auto;
+}
+
+.point .point-image {
+    flex-basis: 60%;
+    max-width: 55%;
+    height: auto;
+    padding-right: 2rem;
+}
+
+.point-text h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .1rem;
+    margin-bottom: 3rem;
+}
+
+.point-text p {
+    text-transform: initial;
+    color: #fff;
+    letter-spacing: .1rem;
+    margin-bottom: 6rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2rem;    
+}
+
+  

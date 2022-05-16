@@ -14,12 +14,11 @@
     <script type="module" src="index.js"></script>
     <script type="module" src="moon.js"></script>
     <script type="module" src="heart.js"></script>
-    <script type="module" src="imageOne.js"></script>
     <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
     <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
 </head>
 <body>
-    <div class="container hero">
+    <div class="container hero mb-5">
         <div class="logo">
             <div class="logo-img">
                 <img src="./assets/images/logo.svg">
@@ -37,18 +36,13 @@
         </div>            
     </div>
     <div class="container">
-        <section>
-            <h3 class="wrapper text" style="margin-top: 5rem;">
-              VISION & VALUES  
-            </h3>
-        </section>
         <section class="mt-5">
             <div class="wrapper column-img">
                 <div id="heart-container" style="width: 627px; height:470px">
                 </div>
                 <div class="column-text">
-                    <h4>Transparancy</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
+                    <h3>Build Openness</h3>
+                    <p>Being open and transparent is very important for us. Honesty is often very hard. The truth is often painful. But the freedome it can bring is worth the trying.</p>
                 </div>
             </div>
         </section>
@@ -57,8 +51,8 @@
                 <video muted="" loop="" playsinline="" autoplay="" preload="none" data-stop="true" class="" style="visibility: visible;"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/home-1.mov" type="video/mp4; codecs=&quot;hvc1&quot;"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm" type="video/webm"> <source src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm" type="video/webm"> </video>
 
                 <div class="column-text">
-                  <h4>Innovate</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
+                  <h3>Innovate</h3>
+                  <p>We love building and taking stuff to the next level. Action speaks louder than words and we believe our projects is an example of that.</p>
                 </div>
             </div>
         </section>
@@ -67,38 +61,41 @@
                 <div id="moon-container" style="width: 627px; height:470px">
                 </div>
                 <div class="column-text">
-                  <h4>Listen, learn & adapt</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
+                  <h3>Listen, learn & adapt</h3>
+                  <p>We always take steps to listen for feedback and make sure that our clients are happy. As the web3 space is growing we are constanly looking for ways to expand our knowledge and improve the quality of our products.</p>
                 </div>
             </div>
         </section>
     </div>
-    <div class="container mt-5" style="overflow: hidden;">
-        <div class="wrapper column-img" style="justify-content: center;">
-            <div class="column-text-2">
-                <h4 style="text-align: start;">ART ENGINE</h4>
-                <p style="text-align: start;">An open source free art generator that we created to help people to create randomized art with diffrent traits and rairity. </p>
-                <button class="button">Visit Page</button>
+    <section class="projects mb-5">
+        <div class="wrapper">
+          <div class="indicators">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+          </div>
+          <div class="point">
+            <div class="point-text">
+              <h3 style="color: white;">Art Engine</h3>
+              <p style="color: white;">An open source free art generator that we created to help people create randomized art with diffrent traits and rairity. </p>
+              <button class="button">Visit Page</button>
             </div>
-            <div id="image-1-container" style="width: 627px; height:470px">
-            </div>  
-        </div>
-                <!-- <li class="menu--item">
-                    <div class="wrapper column-img" style="justify-content: center;">
-                        <div class="column-text">
-                            <h4 class="not-selectable" style="text-align: start;">DOJANG NFT</h2>
-                            <p class="not-selectable" style="text-align: start;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi, libero pretium mauris. Suspendisse quis lectus euismod natoque suspendisse scelerisque. Arcu suspendisse vel nisi dolor, habitasse massa cras. Tristique porttitor a volutpat malesuada nibh condimentum neque.</p>
-                            <button class="button">Visit Page</button>
-                        </div>
-                        <img class="not-selectable" src="https://cdn.discordapp.com/attachments/965306762838278174/975435996109881414/unknown.png"></image>
-                    </div>
-                </li> -->
+            <img class="point-image" src="./assets/images/art-engine-bent.png">
+            </img>  
+          </div>
+          <div class="point">
+            <div class="point-text">
+              <h3 style="color: white;">Dojang NFT</h3>
+              <p style="color: white;">An play to earn game with 5555 randomly generated warriors created with our art engine. </p>
+              <button class="button">Visit Page</button>
+            </div>
+            <img class="point-image" src="./assets/images/dojang-bent.png">
+            </img>  
+          </div>
+    </section>
 
-
-    </div>
     <div class="container mt-5">
         <div class="partner">
-            <h3>Partner with us</h3>
+            <h4>Partner with us</h4>
             <button class="button">Contact</button>
         </div>
         <div class="footer">
@@ -121,18 +118,18 @@
         const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
         gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.5, end: "center center"}});});
 
-        gsap.from('.partner', {
-            scrollTrigger: {
-                trigger: '.partner',
-                once: false,
-                start: "top bottom",
-                toggleActions: "restart pause restart pause"
-            },
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "Power2.easeInOut"
-        });
+        // gsap.from('.partner', {
+        //     scrollTrigger: {
+        //         trigger: '.partner',
+        //         once: false,
+        //         start: "top bottom",
+        //         toggleActions: "restart pause restart pause"
+        //     },
+        //     opacity: 0,
+        //     y: 50,
+        //     duration: 1,
+        //     ease: "Power2.easeInOut"
+        // });
 
         let panels = gsap.utils.toArray(".pin-panel");
 
@@ -144,6 +141,58 @@
             pin: true, 
             pinSpacing: false 
         });
+        });
+
+        ScrollTrigger.defaults({
+            markers:false
+        })
+
+        var points = gsap.utils.toArray('.point');
+        var indicators = gsap.utils.toArray('.indicator');
+
+        var height = 100 * points.length;
+
+        gsap.set('.indicators', {display: "flex"});
+
+        var tl = gsap.timeline({
+        duration: points.length,
+        scrollTrigger: {
+            trigger: ".projects",
+            start: "top center",
+            end: "+="+height+"%",
+            scrub: true,
+            id: "points",
+        }
+        })
+
+        var pinner = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".projects .wrapper",
+            start: "top top",
+            end: "+="+height+"%",
+            scrub: true,
+            pin: ".projects .wrapper",
+            pinSpacing: true,
+            id: "pinning",
+            markers: false
+        }
+        })
+
+
+
+        points.forEach(function(elem, i) {
+        gsap.set(elem, {position: "absolute", top: 0});
+
+        tl.to(indicators[i], {backgroundColor: "white", duration: 0.25}, i)
+        tl.from(elem.querySelector('.point-image'), {autoAlpha:0}, i)
+        tl.from(elem.querySelector('.point-text'), {autoAlpha:0, translateY: 100}, i)
+        
+        if (i != points.length-1) {
+            tl.to(indicators[i], {backgroundColor: "#adadad", duration: 0.25}, i+0.75)
+            tl.to(elem.querySelector('.point-text'), {autoAlpha:0, translateY: -100}, i + 0.75)
+            tl.to(elem.querySelector('.point-image'), {autoAlpha:0}, i + 0.75)
+        }
+        
         });
     </script>
 </body>
