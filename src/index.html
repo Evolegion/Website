@@ -548,7 +548,7 @@
             <div class="point-text">
               <h3 style="color: white;">Art Engine</h3>
               <p style="color: white;">An open source free art generator that we created to help people create randomized art with diffrent traits and rairity. </p>
-              <button class="button">Visit Page</button>
+              <a href="https://artenginebyevolegion.com" target="_blank" class="button">Visit Page</a>
             </div>
             <div class="point-image">
                 <div class="black-cover">
@@ -562,7 +562,7 @@
             <div class="point-text">
               <h3 style="color: white;">Dojang NFT</h3>
               <p style="color: white;">An play to earn game with 5555 randomly generated warriors created with our art engine. </p>
-              <button class="button">Visit Page</button>
+              <a href="https://dojangnft.io" target="_blank" class="button">Visit Page</a>
             </div>
             <div class="point-image">
                 <div class="black-cover">
@@ -579,7 +579,7 @@
     <div class="container mt-5">
         <div class="partner">
             <h4>Partner with us</h4>
-            <button class="button">Contact</button>
+            <button onclick= "document.location =  'mailto:partner@evolegion.io'"" class="button">Contact</button>
         </div>
         <div class="footer">
             <p>©2022 Evolegion. All rights reserved </p>
@@ -600,19 +600,6 @@
         const w = section.querySelector('.wrapper');
         const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
         gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.5, end: "center center"}});});
-
-        // gsap.from('.partner', {
-        //     scrollTrigger: {
-        //         trigger: '.partner',
-        //         once: false,
-        //         start: "top bottom",
-        //         toggleActions: "restart pause restart pause"
-        //     },
-        //     opacity: 0,
-        //     y: 50,
-        //     duration: 1,
-        //     ease: "Power2.easeInOut"
-        // });
 
         let panels = gsap.utils.toArray(".pin-panel");
 

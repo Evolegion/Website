@@ -283,6 +283,8 @@ body
 
 .point .point-text {
     flex-basis: 50%;
+    z-index: 100;
+    position: relative;
 }
 
 .point .point-image {
