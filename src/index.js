@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+
 // import * as THREE from 'three';
 // import starimg from './assets/images/star.png'
 
