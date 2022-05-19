@@ -157,6 +157,19 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      gsap.from('.partner', {
+        scrollTrigger: {
+            trigger: '.partner',
+                once: false,
+                start: "-50% bottom",
+                toggleActions: "restart pause restart pause"
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "Power2.easeInOut"
+        });
     </script>
 </body>
 </html>
