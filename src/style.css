@@ -201,6 +201,7 @@ body
 
 .logo{
     display: inline-flex;
+    transform: scale(1);
 }
 
 .logo-img{
@@ -257,6 +258,12 @@ body
     max-width: 40%;
 }
 
+@media (max-width:3000px) {
+    .logo{
+        transform: scale(1) !important;
+    }
+}
+
 @media (max-width:1200px) {
     .column-img{
         display: block;
@@ -274,6 +281,11 @@ body
         text-align: center;
     }
 
+    .projects{
+        display: none;
+        visibility: hidden;
+    }
+
 } 
 
 @media (max-width:960px) {
@@ -284,11 +296,38 @@ body
     .partner h4{
         font-size: 3rem;
     }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: none;
+        visibility: hidden;
+    }
 }
 
 @media (max-width:500px) {
     .partner h4{
         font-size: 2rem;
+    }
+}
+
+@media (max-width:450px) {
+    .column-text h3{
+        font-size: 2.5rem;
+    }
+
+    .swiper-content h3{
+        font-size: 2.5rem !important;
+    }
+
+    .column-text p{
+        font-size: 1.25rem;
+    }
+
+    .swiper-content p{
+        font-size: 1.25rem !important;
+    }
+
+    .button-2{
+        font-size: 1.25rem; 
     }
 }
 
@@ -308,8 +347,30 @@ body
     .partner h4{
         font-size: 1.5rem;
     }
+
+    .column-text h3{
+        font-size: 2rem;
+        padding-inline: 20px;
+    }
+
+    .swiper-content h3{
+        font-size: 2rem !important;
+    }
+
+    .column-text p{
+        font-size: 1rem;
+        padding-inline: 40px;
+    }
+
+    .swiper-content p{
+        font-size: 1rem !important;
+    }
+
+    .button-2{
+        font-size: 1rem; 
+    }
 }
-  
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -331,7 +392,7 @@ body
     margin: 0 auto;
 }
 
-.swiper-slide h3 {
+.swiper-content h3 {
     color: white;
     text-transform: uppercase;
     color: #fff;
@@ -340,7 +401,7 @@ body
     margin-inline: 5%;
 }
 
-.swiper-slide p {
+.swiper-content p {
     text-transform: initial;
     color: #fff;
     letter-spacing: .1rem;
@@ -352,7 +413,7 @@ body
     margin-inline: 5%;
 }
 
-.swiper-slide a {
+.swiper-content a {
     margin-inline: 5%;
 }
 
@@ -361,8 +422,47 @@ body
     margin-right: auto;
 }
 
+.swiper-button-next{
+    right: 0 !important; 
+}
+
+.swiper-button-prev{
+    left: 0 !important; 
+}
+
+
 @media (min-width:960px) {
     .container-maxwidth-md {
         max-width: 960px;
     }
+}
+
+.projects {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 0;
+    
+}
+
+.projects span{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    transform: rotate(-90deg);
+    padding-block: 5rem;
+    line-height: 0;
+    animation: infinite_title 3s infinite linear both;
+}
+
+@keyframes infinite_title {
+    from {
+        transform: translateY(0) rotate(-90deg);
+    }
+
+    to {
+        transform: translateY(-100%) rotate(-90deg);
+   }
 }
