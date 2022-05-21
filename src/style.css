@@ -255,6 +255,10 @@ body
     margin-bottom: 5rem;
 }
 
+.mb-10{
+    margin-bottom: 10rem;
+}
+
 .my-5{
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -572,3 +576,46 @@ body
 .active:after {
     content: "\2796";
 }
+
+.terms{
+    color: white;
+    padding: 4rem;
+    font-family: 'Roboto','Helvetica','Arial','sans-serif';
+}
+
+.terms h1{
+    font-size: 3rem;
+    margin-block: 2rem;
+}
+
+.terms h2{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.terms h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.terms p{
+    font-size: 1.2rem;
+    color:#f5f5f5;
+    margin-bottom: 1rem;
+}
+
+.terms ul{
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.terms .email {
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+.terms a {
+    color: #ffffff;
+}
+
