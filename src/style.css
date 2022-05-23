@@ -279,8 +279,8 @@ body
     align-items: center;
 }
 
-.column-img img{
-    height:400px; 
+.column-img video{
+    height:500px; 
     width: auto;
 }
 
@@ -301,7 +301,7 @@ body
         display: block;
     }
 
-    .column-img img{
+    .column-img video{
         display: block;
         margin: 0 auto;
         padding-bottom: 2rem;
@@ -398,7 +398,7 @@ body
         font-size: 1.5rem;
     }
 
-    .column-img img{
+    .column-img video{
         height: 280px;
         padding-bottom: 4rem;
     }
