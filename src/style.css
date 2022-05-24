@@ -288,7 +288,6 @@ body
 .column-img .video-container{
     height:500px; 
     width: auto;
-    -webkit-filter:brightness(108.5%);
 }
 
 .column-img .video-container video{
@@ -366,6 +365,11 @@ body
         position: absolute;
         bottom: 0;
         margin-bottom: 1rem;
+    }
+
+    .column-img .video-container{
+        -webkit-filter:brightness(108.5%);
+        -webkit-transform: translate3d(0,0,0);  
     }
 }
 
