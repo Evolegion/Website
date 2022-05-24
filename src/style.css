@@ -29,6 +29,10 @@
     padding: 0;
 }
 
+html{
+    height: -webkit-fill-available;
+}
+
 html,
 body
 {
@@ -53,8 +57,10 @@ body
     z-index: 1;
     width: 100%;    
     min-height: 100vh;
+    height: 100%;
     display: grid;  
     place-content: center;
+    height: -webkit-fill-available;
 }
 
 .scroll {
