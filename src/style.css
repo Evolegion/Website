@@ -61,6 +61,8 @@ body
     display: grid;  
     place-content: center;
     height: -webkit-fill-available;
+    flex: 1;
+    overflow: scroll;
 }
 
 .scroll {
