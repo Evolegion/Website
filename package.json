@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html && cp netlify.toml dist"
+    "build": "parcel build src/*.html && copy netlify.toml dist"
   },
   "keywords": [],
   "author": "",
