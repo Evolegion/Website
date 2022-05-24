@@ -27,6 +27,8 @@
 {
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -60,9 +62,7 @@ body
     height: 100%;
     display: grid;  
     place-content: center;
-    height: -webkit-fill-available;
-    flex: 1;
-    overflow: scroll;
+
 }
 
 .scroll {
