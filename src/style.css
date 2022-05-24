@@ -500,7 +500,7 @@ body
     flex-direction: column;
 }
 
-.swiper-slide img {
+.swiper-slide picture img {
     width: 90%;
     padding-top: 3.5rem;
     display: block;

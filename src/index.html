@@ -75,7 +75,11 @@
             <div class="swiper-wrapper container-maxwidth-md">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="./assets/images/art-engine.webp">
+                    <picture>  
+                        <source srcset="./assets/images/art-engine.webp" type="image/webp">     
+                        <source srcset="./assets/images/art-engine.jpg" type="image/jpg">
+                        <img src="./assets/images/art-engine.webp" alt="art engine">
+                    </picture>
                     <div class="swiper-content my-5">
                         <h3>Art Engine</h3>
                         <p>We created an open-source, free art engine to help people in the web3 space create generated art easier and faster.</p>
@@ -83,7 +87,11 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/images/dojang.webp">
+                    <picture>  
+                        <source srcset="./assets/images/dojang.webp" type="image/webp">     
+                        <source srcset="./assets/images/dojang.jpg" type="image/jpg">
+                        <img src="./assets/images/dojang.webp" alt="doajng nft">
+                    </picture>
                     <div class="swiper-content my-5">
                         <h3>Dojang NFT</h3>
                         <p>A play-to-earn game made in Unity 5 with 5555 randomly generated warriors created with our art engine.</p>
@@ -201,9 +209,6 @@
             duration: 1,
             ease: "Power2.easeInOut"
         });
-
-        
-        
     </script>
 </body>
 </html> 
