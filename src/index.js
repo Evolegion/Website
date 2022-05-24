@@ -13,14 +13,7 @@ acc[i].addEventListener("click", function() {
 });
 }
 
-let emailButton = document.getElementById("email");
-emailButton.setAttribute('href',"mailto:partner@evolegion.io?subject=Partner");
-
 let vh = window.innerHeight * 0.01;
 
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-// window.addEventListener('resize', () => {
-//     let vh = window.innerHeight * 0.01;
-//     document.documentElement.style.setProperty('--vh', `${vh}px`);
-//   });
