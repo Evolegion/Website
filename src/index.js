@@ -1,5 +1,3 @@
-import './style.css';
-
 var acc = document.getElementsByClassName("accordion");
 var i;
 
