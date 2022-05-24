@@ -59,7 +59,7 @@ body
     z-index: 1;
     width: 100%;    
     min-height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
     display: grid;  
     place-content: center;
 
