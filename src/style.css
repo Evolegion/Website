@@ -186,6 +186,29 @@ body
     transform: translateY(-2px);
 }
 
+.button-3 {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Roboto','Helvetica','Arial','sans-serif';
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-3 span {
+    padding-left: 0.5rem;
+}
+
+.terms-navbar{
+    padding-inline: 4rem; 
+    padding-block: 1rem;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -404,6 +427,11 @@ body
     .button-2{
         font-size: 1.25rem; 
     }
+
+    .terms-navbar{
+        padding-inline: 2rem; 
+        padding-block: 1rem;
+    }
 }
 
 @media (max-width:400px) {
@@ -448,6 +476,11 @@ body
 
     .button-2{
         font-size: 1rem; 
+    }
+
+    .terms-navbar{
+        padding-inline: 1rem; 
+        padding-block: 1rem;
     }
 }
 
