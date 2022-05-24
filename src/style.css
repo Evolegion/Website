@@ -315,7 +315,7 @@ body
     width: auto;
 }
 
-.column-img .video-container video{
+.column-img .video-container video, .column-img .video-container img{
     -o-object-fit: contain;
     object-fit: contain;
     width:100%;
