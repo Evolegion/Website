@@ -108,6 +108,7 @@ body
 
 .column-text h2{
     font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     letter-spacing: .1rem;
@@ -115,6 +116,7 @@ body
 
 .column-text p{
     font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     text-transform: initial;
     color: rgb(255, 255, 255);
     letter-spacing: 0.1rem;
@@ -325,6 +327,12 @@ body
     max-width: 40%;
 }
 
+.mobile-projects{
+    display: none;
+    visibility: hidden;
+}
+
+
 @media (max-width:3000px) {
     .logo{
         transform: scale(1) !important;
@@ -340,12 +348,13 @@ body
         display: block;
         margin: 0 auto;
         padding-bottom: 2rem;
+        padding-inline: 3rem;
         height:500px; 
         width: auto;
     }
 
     .column-text{
-        padding-inline: 2rem;
+        padding-inline: 3rem;
         color: white;
         max-width: none;
         text-align: center;
@@ -356,6 +365,34 @@ body
         visibility: hidden;
     }
 
+    .mobile-projects{
+        display: block;
+        visibility: visible;
+    }
+
+    .mobile-projects h2{
+        color: white;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+
+    .swiper-wrapper{
+        margin-top: 5rem !important;
+    }
+
+    .swiper-slide picture img{
+        width: 70% !important;
+    }
+
+    .swiper-content h2, .swiper-content p, .swiper-content a{
+        margin-inline: 15% !important;
+    }
 } 
 
 @media (max-width:960px) {
@@ -393,6 +430,20 @@ body
         -webkit-filter:brightness(108.5%);
         -webkit-transform: translate3d(0,0,0);  
     }
+
+    .swiper-slide picture img{
+        width: 80% !important;
+    }
+
+    .swiper-content h2, .swiper-content p, .swiper-content a{
+        margin-inline: 10% !important;
+    }
+}
+
+@media (max-width:650px) {
+    .swiper-slide picture img{
+        padding-top: 7.5rem !important;
+    }
 }
 
 @media (max-width:500px) {
@@ -407,21 +458,6 @@ body
 }
 
 @media (max-width:450px) {
-    .column-text h2{
-        font-size: 2.5rem;
-    }
-
-    .swiper-content h2{
-        font-size: 2.5rem !important;
-    }
-
-    .column-text p{
-        font-size: 1.25rem;
-    }
-
-    .swiper-content p{
-        font-size: 1.25rem !important;
-    }
 
     .button-2{
         font-size: 1.25rem; 
@@ -456,21 +492,11 @@ body
     }
 
     .column-text h2{
-        font-size: 2rem;
         padding-inline: 20px;
     }
 
-    .swiper-content h2{
-        font-size: 2rem !important;
-    }
-
     .column-text p{
-        font-size: 1rem;
         padding-inline: 40px;
-    }
-
-    .swiper-content p{
-        font-size: 1rem !important;
     }
 
     .button-2{
@@ -490,6 +516,7 @@ body
 
 .swiper-wrapper{
     height: 50%;
+    margin-top: 0;
 }
 
 .swiper-slide {
@@ -510,6 +537,7 @@ body
     color: #fff;
     letter-spacing: .1rem;
     font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     margin-inline: 10%;
 }
 
@@ -520,6 +548,7 @@ body
     margin-bottom: 2.5rem;
     padding-top: 1rem;
     font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: normal;
     line-height: 2rem;
     margin-inline: 10%;
@@ -527,6 +556,8 @@ body
 
 .swiper-content a {
     margin-inline: 10%;
+    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .swiper {
