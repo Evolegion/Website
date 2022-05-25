@@ -282,6 +282,11 @@ body
     margin-bottom: 10rem;
 }
 
+.my-2{
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+}
+
 .my-5{
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -493,7 +498,7 @@ body
 }
 
 .swiper-slide picture img {
-    width: 90%;
+    width: 80%;
     padding-top: 3.5rem;
     display: block;
     margin: 0 auto;
@@ -505,23 +510,23 @@ body
     color: #fff;
     letter-spacing: .1rem;
     font-size: 3rem;
-    margin-inline: 5%;
+    margin-inline: 10%;
 }
 
 .swiper-content p {
     text-transform: initial;
     color: #fff;
     letter-spacing: .1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     padding-top: 1rem;
     font-size: 1.5rem;
     font-weight: normal;
     line-height: 2rem;
-    margin-inline: 5%;
+    margin-inline: 10%;
 }
 
 .swiper-content a {
-    margin-inline: 5%;
+    margin-inline: 10%;
 }
 
 .swiper {
