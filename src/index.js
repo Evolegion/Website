@@ -32,7 +32,7 @@ function App(conf) {
         fov: 75,
         cameraZ: 150,
         background: 0x00000000,
-        tubeRadius: 3,
+        tubeRadius: 2,
         resY: 10,
         resX: 4,
         noiseCoef: 50,
@@ -40,7 +40,7 @@ function App(conf) {
         mouseCoef: 50,
         heightCoef: 20,
         ambientColor: 0xcccccc,
-        lightIntensity: 1,
+        lightIntensity: 0.5,
         light1Color: 0x0D5BF2,
         light2Color: 0x1A15FF,
         light3Color: 0x4361EE,
@@ -53,7 +53,7 @@ function App(conf) {
 
     let light1, light2, light3, light4;
     let objects, noiseConf = {};
-    let cscale; updateCScale(chroma('#d11f6c'));
+    let cscale; updateCScale(chroma('#0047FF'));
 
     const mouse = new THREE.Vector2();
 
@@ -90,7 +90,7 @@ function App(conf) {
         scene.add(new THREE.AmbientLight(conf.ambientColor));
 
         const z = 50;
-        const lightDistance = 500;
+        const lightDistance = 100;
         light1 = new THREE.PointLight(conf.light1Color, conf.lightIntensity, lightDistance);
         light1.position.set(0, wHeight / 2, z);
         scene.add(light1);
@@ -122,7 +122,7 @@ function App(conf) {
     }
 
     function updateNoise() {
-        noiseConf.coef = conf.noiseCoef * 0.00012;
+        noiseConf.coef = conf.noiseCoef * 0.00015;
         noiseConf.height = conf.heightCoef;
         noiseConf.time = Date.now() * conf.timeCoef * 0.000002;
         noiseConf.mouseX = mouse.x / 2;
@@ -142,9 +142,6 @@ function App(conf) {
     }
 
     function animate() {
-        // if (!animate.counter) animate.counter = 1;
-        // if (animate.counter++>10) return;
-
         requestAnimationFrame(animate);
 
         animateObjects();
@@ -200,16 +197,6 @@ function App(conf) {
 }
 
 /**
- * Custom curve
- */
-
-// CustomCurve.prototype = Object.create(THREE.Curve.prototype);
-// CustomCurve.prototype.constructor = CustomCurve;
-// CustomCurve.prototype.getPoint = function (t) {
-    
-// };
-
-/**
  * Tube class
  */
 class Tube {
@@ -218,7 +205,7 @@ class Tube {
         this.radialSegments = 8;
         this.radius = radius;
 
-        this.curve = new CustomCurve2(x, y, l, noise);
+        this.curve = new CustomCurve(x, y, l, noise);
         this.geometry = new THREE.TubeBufferGeometry(this.curve, segments, radius, this.radialSegments, false);
         // this.material = new THREE.MeshBasicMaterial({ color });
         // this.material = new THREE.MeshLambertMaterial({ color });
@@ -268,7 +255,11 @@ class Tube {
     }
 }
 
-class CustomCurve2 extends THREE.Curve  {
+/**
+ * Custom curve
+ */
+
+class CustomCurve extends THREE.Curve  {
     constructor(x, y, l, noise) {
         super();
         
