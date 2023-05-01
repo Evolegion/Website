@@ -13,5 +13,10 @@
     "@parcel/packager-raw-url": "^2.5.0",
     "@parcel/transformer-webmanifest": "^2.5.0",
     "parcel": "^2.5.0"
+  },
+  "dependencies": {
+    "chroma-js": "^2.0.3",
+    "simplex-noise": "^2.4.0",
+    "three": "^0.152.2"
   }
 }

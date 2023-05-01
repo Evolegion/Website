@@ -8,8 +8,7 @@
     <meta name="title" content="Evolegion - A Web3 Brand Providing Tools and Services">
     <meta name="description" content="A web3 brand providing tools and services with creativity and entertainment.">
     <meta name="keywords" content="web3,NFT,play to earn, ">
-    <!-- <meta name="robots" content="index, follow"> -->
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <link rel="canonical" href="https://evolegion.io" />
     <meta content="assets/images/share.jpg" property="og:image">
@@ -31,10 +30,18 @@
     <link rel="stylesheet" href="style.css" >
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000"></meta>
-    <script type="module" src="index.js"></script>
 </head>
 <body>
-    <div class="container hero mb-5"> 
+    <div class="container hero mb-5">
+        <div id="circle-1" class="site-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) rotate(40deg);"><circle vector-effect="non-scaling-stroke" cx="50" cy="50" r="50" stroke-dasharray="0 22.43994752564138" stroke-linecap="round" stroke-width="2"></circle></svg>
+        </div>
+        <div id="circle-2" class="site-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) rotate(-40deg);"><circle vector-effect="non-scaling-stroke" cx="50" cy="50" r="50" stroke-dasharray="0 20.943951023931955" stroke-linecap="round" stroke-width="2"></circle></svg>
+        </div>
+        <div id="circle-3" class="site-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) rotate(40deg);"><circle vector-effect="non-scaling-stroke" cx="50" cy="50" r="50" stroke-dasharray="0 19.634954084936208" stroke-linecap="round" stroke-width="2"></circle></svg>
+        </div>
         <div class="logo">
             <div class="logo-img">
                 <img src="./assets/images/logo.svg" alt="logo">    
@@ -49,7 +56,8 @@
                 <path class="scroll-wheel" d="M23.5757 42.6401C23.5757 44.7341 21.8623 46.4495 19.7708 46.4495C17.6743 46.4495 15.9658 44.7341 15.9658 42.6401V38.7147C15.9658 36.6208 17.6793 34.9053 19.7708 34.9053C21.8623 34.9053 23.5757 36.6208 23.5757 38.7147V42.6401Z" fill="white"/>
             </svg>
             <p>Scroll into the legion</p>
-        </div>            
+        </div>
+        <canvas id="canvas" class="webgl"></canvas>       
     </div>
     <div class="container">
         <section class="mt-5">
@@ -62,8 +70,8 @@
                     </video>
                 </div>
                 <div class="column-text">
-                    <h2>Transparancy</h2>
-                    <p>Being open and transparent is very important for us. The community is a part of our journey, and we want to share everything.</p>
+                    <h2>Elevate your Web3 game with Evolegion</h2>
+                    <p>At Evolegion, we're committed to helping you take your Web3 project to new heights. Our innovative tools and services are designed to help you elevate your game and stand out from the crowd.</p>
                 </div>
             </div>
         </section>
@@ -77,8 +85,8 @@
                     </video>
                 </div>
                 <div class="column-text">   
-                  <h2>Innovate</h2>
-                  <p>We love building and taking stuff to the next level. We strongly believe that action speaks louder than words, and we hope to accomplish that with our projects.</p>
+                  <h2>Unleash the power of Web3</h2>
+                  <p>Ready to unleash the full potential of Web3? Evolegion has the expertise and cutting-edge tools you need to make it happen. Let's build something amazing together.</p>
                 </div>
             </div>
         </section>
@@ -92,8 +100,8 @@
                     </video>
                 </div>
                 <div class="column-text">   
-                  <h2>Listen, learn & adapt</h2>
-                  <p>We always take steps to listen for feedback and make sure that our clients are happy. In addition, as the web3 space is growing, we are constantly looking for ways to expand our knowledge and improve the quality of our products.</p>
+                  <h2>Web3 solutions that evolve with you</h2>
+                  <p>At Evolegion, we're all about helping you evolve and grow in the Web3 space. Our solutions are designed to adapt to your needs and help you achieve your goals, no matter where your journey takes you.</p>
                 </div>
             </div>
         </section>
@@ -114,8 +122,8 @@
                         <img src="./assets/images/art-engine.webp" alt="evolegion art engine">
                     </picture>
                     <div class="swiper-content my-2">
-                        <h2>Art Engine</h2>
-                        <p>We created an open-source, free art engine to help people in the web3 space create generated art easier and faster.</p>
+                        <h2>Mixer Studio</h2>
+                        <p>Introducing Mixer Studio - the fastest and most feature-packed NFT art generator. Create unique NFT artwork in minutes with unmatched speed and ease. Try Mixer Studio today and elevate your NFT art game.</p>
                         <a href="https://artenginebyevolegion.com" target="_blank" class="button-2">Visit Page</a>
                     </div>
                 </div>
@@ -156,7 +164,7 @@
             <a id="email" class="button">Contact</a>
         </div>
         <div class="footer">
-            <p>©2022 Evolegion. All rights reserved </p>
+            <p>©2023 Evolegion. All rights reserved </p>
             <div class="links">
                 <div style="line-height: 0;">
                     <a href="https://twitter.com/teamevolegion" target="_blank">Twitter</a>
@@ -183,9 +191,10 @@
                 <a href="terms-and-conditions.html">Terms and Condition</a>
             </div>
 
-            <p class="text pt-2">©2022 Evolegion. All rights reserved </p>
+            <p class="text pt-2">©2023 Evolegion. All rights reserved </p>
         </div>
     </div>
+    <script type="module" src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -195,9 +204,12 @@
         
         gsap.from('.logo', {opacity: 0, duration: 1, y: -50, ease: 'Power2.easeInOut'});
         gsap.from('.hero h1', {opacity: 0, duration: 1, y: 50, ease: 'Power2.easeInOut', delay: 1});
-        gsap.from('.scroll', {opacity: 0, duration: 1, y: 50, ease: 'Power2.easeInOut', delay: 1.8});
+        gsap.from('.scroll', {opacity: 0, duration: 1, y: 50, ease: 'Bounce.easeOut', delay: 1.8});
         gsap.to('.logo-text-img', {width: 'auto', duration: 1, delay: 1, ease: 'power1.out'});
-        // gsap.to('.logo-text-img', {overflow: 'unset',  delay: 2.5, ease: 'power1.out'});
+        gsap.from('#circle-1', {opacity: 0, duration: 1, delay: 2.75, ease: 'power1.out'});
+        gsap.from('#circle-2', {opacity: 0, duration: 1, delay: 3, ease: 'power1.out'});
+        gsap.from('#circle-3', {opacity: 0, duration: 1, delay: 3.25, ease: 'power1.out'});
+        gsap.from('#canvas', {opacity: 0, duration: 1, delay: 2.25, ease: 'Power2.easeInOut'});
 
         gsap.utils.toArray('section').forEach((section, index) => {
         const w = section.querySelector('.column-img');
