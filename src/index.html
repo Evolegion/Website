@@ -59,50 +59,26 @@
         </div>
         <canvas id="canvas" class="webgl"></canvas>       
     </div>
-    <div class="container second-container" id="content">
-        <section class="mt-5">
-            <div class="column-img">
-                <div class="video-container">
-                    <video autoplay muted loop playsinline>
-                        <source src="./assets/videos/cubes-compressed.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        <source src="./assets/videos/cubes-compressed.webm" type='video/webm; codecs="vp8, vorbis"' />
-                        <img src="./assets/images/cubes.jpg" title="Your browser does not support the video tag">
-                    </video>
-                </div>
-                <div class="column-text">
-                    <h2>Elevate your Web3 game with Evolegion</h2>
-                    <p>At Evolegion, we're committed to helping you take your Web3 project to new heights. Our innovative tools and services are designed to help you elevate your game and stand out from the crowd.</p>
-                </div>
+    <div class="container second-container mb-10" id="content">
+        <section class="mt-10">
+            <div class="column-text">
+                <h2 data-value="UNLESH THE POWER">UNLESH THE POWER</h2>
             </div>
         </section>
-        <section class="mt-5">
-            <div class="column-img">
-                <div class="video-container">
-                    <video autoplay muted loop playsinline>
-                        <source src="./assets/videos/cylinders-compressed.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        <source src="./assets/videos/cylinders-compressed.webm" type='video/webm; codecs="vp8, vorbis"' />
-                        <img src="./assets/images/cylinders.jpg" title="Your browser does not support the video tag">
-                    </video>
-                </div>
-                <div class="column-text">   
-                  <h2>Unleash the power of Web3</h2>
-                  <p>Ready to unleash the full potential of Web3? Evolegion has the expertise and cutting-edge tools you need to make it happen. Let's build something amazing together.</p>
-                </div>
+        <section class="mt-10">
+            <div class="column-text">   
+                <h2 data-value="TO EVOLVE THROUGH">TO EVOLVE THROUGH</h2>
             </div>
         </section>
-        <section class="mt-5">
-            <div class="column-img">
-                <div class="video-container">
-                    <video autoplay muted loop playsinline>
-                        <source src="./assets/videos/path-compressed.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        <source src="./assets/videos/path-compressed.webm" type='video/webm; codecs="vp8, vorbis"' />
-                        <img src="./assets/images/path.jpg" title="Your browser does not support the video tag">
-                    </video>
-                </div>
-                <div class="column-text">   
-                  <h2>Web3 solutions that evolve with you</h2>
-                  <p>At Evolegion, we're all about helping you evolve and grow in the Web3 space. Our solutions are designed to adapt to your needs and help you achieve your goals, no matter where your journey takes you.</p>
-                </div>
+        <section class="mt-10">
+            <div class="column-text">   
+                <h2 data-value="CREATIVITY, DISCOVERY">CREATIVITY, DISCOVERY</h2>
+            </div>
+        </section>
+
+        <section class="mt-10">
+            <div class="column-text">   
+                <h2 data-value="AND TECHNOLOGY.">AND TECHNOLOGY.</h2>
             </div>
         </section>
     </div>
@@ -148,6 +124,16 @@
             <div class="swiper-button-next"></div>
         </div>
         <div class="projects">
+            <span>projects</span>
+            <span>projects</span>
+            <span>projects</span>
+            <span>projects</span>
+            <span>projects</span>
+            <span>projects</span>
+            <span>projects</span>
+            <span>projects</span>
+        </div>
+        <div class="projects second">
             <span>projects</span>
             <span>projects</span>
             <span>projects</span>
@@ -212,9 +198,9 @@
         gsap.from('#canvas', {opacity: 0, duration: 1, delay: 2.25, ease: 'Power2.easeInOut'});
 
         gsap.utils.toArray('section').forEach((section, index) => {
-        const w = section.querySelector('.column-img');
+        const w = section.querySelector('.column-text');
         const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-        gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.5, end: "center center"}});});
+        gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.2, end: "center center"}});});
 
         let panels = gsap.utils.toArray(".pin-panel");
 
@@ -253,6 +239,38 @@
             y: 50,
             duration: 1,
             ease: "Power2.easeInOut"
+        });
+
+        /* -- Text effect -- */
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        let interval = null;
+
+        document.querySelectorAll(".column-text h2").forEach(h2 => {
+            h2.onmouseover = event => {  
+                let iteration = 0;
+
+                clearInterval(interval);
+
+                interval = setInterval(() => {
+                    event.target.innerText = event.target.innerText
+                        .split("")
+                        .map((letter, index) => {
+                            if(index < iteration) {
+                                return event.target.dataset.value[index];
+                            }
+
+                            return letters[Math.floor(Math.random() * 26)]
+                        })
+                        .join("");
+
+                    if(iteration >= event.target.dataset.value.length){ 
+                        clearInterval(interval);
+                    }
+
+                    iteration += 1 / 3;
+                }, 30);
+            }
         });
     </script>
 </body>

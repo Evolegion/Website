@@ -120,11 +120,12 @@ canvas.webgl {
 }
 
 .column-text h2{
-    font-size: 3rem;
-    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    font-size: 5rem;
+    font-size: clamp(5rem, 5vw, 10rem);
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     letter-spacing: .1rem;
+    text-align: center;
 }
 
 .column-text p{
@@ -290,6 +291,10 @@ canvas.webgl {
     margin-top: 5rem;
 }
 
+.mt-10{
+    margin-top: 10rem;
+}
+
 .mb-5{
     margin-bottom: 5rem;
 }
@@ -335,12 +340,6 @@ canvas.webgl {
     height:100%;
 }
 
-.column-text{
-    padding-left: 4rem;
-    color: white;
-    max-width: 40%;
-}
-
 .mobile-projects{
     display: none;
     visibility: hidden;
@@ -365,13 +364,6 @@ canvas.webgl {
         padding-inline: 3rem;
         height:500px; 
         width: auto;
-    }
-
-    .column-text{
-        padding-inline: 3rem;
-        color: white;
-        max-width: none;
-        text-align: center;
     }
 
     .projects{
@@ -612,6 +604,15 @@ canvas.webgl {
     padding-block: 5rem;
     line-height: 0;
     animation: infinite_title 3s infinite linear both;
+}
+
+.projects.second{
+    opacity: 0.2;
+    left: 2%;
+}
+
+.projects.second span {
+    animation: infinite_title 6s infinite linear both !important;
 }
 
 @keyframes infinite_title {
