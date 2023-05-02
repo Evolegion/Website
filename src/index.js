@@ -44,12 +44,12 @@ function App(conf) {
         light1Color: 0x0D5BF2,
         light2Color: 0x1A15FF,
         light3Color: 0x4361EE,
-        light4Color: 0x20D2FF,
+        light4Color: 0x21007E,
         ...conf
     };
 
     let renderer, scene, camera, cameraCtrl, canvas;
-    let width, height, cx, cy, wWidth, wHeight;
+    let width, height, wWidth, wHeight;
 
     let light1, light2, light3, light4;
     let objects, noiseConf = {};
