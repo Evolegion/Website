@@ -59,30 +59,18 @@
         </div>
         <canvas id="canvas" class="webgl"></canvas>       
     </div>
-    <div class="container second-container mb-10" id="content">
-        <section class="mt-10">
-            <div class="column-text">
-                <h2 data-value="UNLESH THE POWER">UNLESH THE POWER</h2>
-            </div>
+    <div class="container second-container" id="content">
+        <section>
+            <h2 class="motto-text">UNLESH THE POWER</h2>
         </section>
-        <section class="mt-10">
-            <div class="column-text">   
-                <h2 data-value="TO EVOLVE THROUGH">TO EVOLVE THROUGH</h2>
-            </div>
+        <section>
+            <h2 class="motto-text">TO GO BLACK</h2>
         </section>
-        <section class="mt-10">
-            <div class="column-text">   
-                <h2 data-value="CREATIVITY, DISCOVERY">CREATIVITY, DISCOVERY</h2>
-            </div>
-        </section>
-
-        <section class="mt-10">
-            <div class="column-text">   
-                <h2 data-value="AND TECHNOLOGY.">AND TECHNOLOGY.</h2>
-            </div>
+        <section>
+            <h2 class="motto-text">AND NEVER GO BACK</h2>
         </section>
     </div>
-    <div class="container my-5 blue" style="overflow: hidden; height: 100vh;">
+    <div class="container py-5 blue" style="overflow: hidden; height: 100vh;">
         <div class="mobile-projects">
             <h2>Projects</h2>
         </div>
@@ -187,7 +175,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
-        
+        gsap.config({ trialWarn: false });
         gsap.from('.logo', {opacity: 0, duration: 1, y: -50, ease: 'Power2.easeInOut'});
         gsap.from('.hero h1', {opacity: 0, duration: 1, y: 50, ease: 'Power2.easeInOut', delay: 1});
         gsap.from('.scroll', {opacity: 0, duration: 1, y: 50, ease: 'Bounce.easeOut', delay: 1.8});
@@ -198,20 +186,31 @@
         gsap.from('#canvas', {opacity: 0, duration: 1, delay: 2.25, ease: 'Power2.easeInOut'});
 
         gsap.utils.toArray('section').forEach((section, index) => {
-        const w = section.querySelector('.column-text');
+        const w = section.querySelector('.motto-text');
         const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
         gsap.fromTo(w, {  x  }, {x: xEnd,scrollTrigger: { trigger: section, scrub: 0.2, end: "center center"}});});
+
+        gsap.to("#content", {
+            "--target": "0%",
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#content",
+                start: "top top",
+                end: "+=500",
+                pin: true,
+                scrub: 1
+            }
+        });
 
         let panels = gsap.utils.toArray(".pin-panel");
 
         panels.forEach((panel, i) => {
-            
-        ScrollTrigger.create({
-            trigger: panel,
-            start: "top top", 
-            pin: true, 
-            pinSpacing: false 
-        });
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top top", 
+                pin: true, 
+                pinSpacing: false 
+            });
         });
 
         var swiper = new Swiper(".swiper", {
@@ -239,38 +238,6 @@
             y: 50,
             duration: 1,
             ease: "Power2.easeInOut"
-        });
-
-        /* -- Text effect -- */
-        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-        let interval = null;
-
-        document.querySelectorAll(".column-text h2").forEach(h2 => {
-            h2.onmouseover = event => {  
-                let iteration = 0;
-
-                clearInterval(interval);
-
-                interval = setInterval(() => {
-                    event.target.innerText = event.target.innerText
-                        .split("")
-                        .map((letter, index) => {
-                            if(index < iteration) {
-                                return event.target.dataset.value[index];
-                            }
-
-                            return letters[Math.floor(Math.random() * 26)]
-                        })
-                        .join("");
-
-                    if(iteration >= event.target.dataset.value.length){ 
-                        clearInterval(interval);
-                    }
-
-                    iteration += 1 / 3;
-                }, 30);
-            }
         });
     </script>
 </body>
