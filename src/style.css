@@ -65,7 +65,7 @@ canvas.webgl {
 #content {
     --target: 100%;
     width: 100%;
-    background: linear-gradient(to right, #fff var(--target), #000 var(--target));
+    background: linear-gradient(to right, #F2F1EB var(--target), #000 var(--target));
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -305,6 +305,7 @@ canvas.webgl {
     position: relative;
     width: 0;
     overflow: hidden;
+    padding-left: 10px;
 }
 
 .wrapper {
@@ -356,7 +357,7 @@ canvas.webgl {
 }
 
 .blue{
-    background-color: #000E64;
+    background-color: #241ff3;
 }
 
 .column-img{
