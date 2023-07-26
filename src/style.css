@@ -379,11 +379,6 @@ canvas.webgl {
     height:100%;
 }
 
-.mobile-projects{
-    display: none;
-    visibility: hidden;
-}
-
 
 @media (max-width:3000px) {
     .logo{
@@ -408,27 +403,6 @@ canvas.webgl {
     .projects{
         display: none;
         visibility: hidden;
-    }
-
-    .mobile-projects{
-        display: block;
-        visibility: visible;
-    }
-
-    .mobile-projects h2{
-        color: white;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin-top: 2rem;
-        text-transform: uppercase;
-        font-size: 3rem;
-        font-size: clamp(1.8rem, 5vw, 3rem);
-    }
-
-    .swiper-wrapper{
-        margin-top: 5rem !important;
     }
 
     .swiper-slide picture img{
@@ -482,12 +456,6 @@ canvas.webgl {
 
     .swiper-content h2, .swiper-content p, .swiper-content a{
         margin-inline: 10% !important;
-    }
-}
-
-@media (max-width:650px) {
-    .swiper-slide picture img{
-        padding-top: 7.5rem !important;
     }
 }
 
@@ -567,6 +535,8 @@ canvas.webgl {
 .swiper-slide {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 98%;
 }
 
 .swiper-slide picture img {
@@ -603,6 +573,7 @@ canvas.webgl {
     margin-inline: 10%;
     font-size: 1.5rem;
     font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 0;
 }
 
 .swiper {
