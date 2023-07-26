@@ -17,6 +17,6 @@
   "dependencies": {
     "chroma-js": "^2.0.3",
     "simplex-noise": "^2.4.0",
-    "three": "^0.152.2"
+    "three": "0.152.2"
   }
 }
