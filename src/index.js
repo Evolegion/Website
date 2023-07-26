@@ -19,7 +19,7 @@ acc[i].addEventListener("click", function() {
 }
 
 let emailButton = document.getElementById("email");
-emailButton.setAttribute('href',"mailto:partner@evolegion.io?subject=Partner");
+emailButton.setAttribute('href',"mailto:teamevolegion@gmail.com?subject=Partner");
 
 let vh = window.innerHeight * 0.01;
 
