@@ -174,9 +174,7 @@ function App(conf) {
 
     function updateSize() {
         width = window.innerWidth;
-        cx = width / 2;
         height = window.innerHeight;
-        cy = height / 2;
         if (renderer && camera) {
             renderer.setSize(width, height);
             camera.aspect = width / height;
